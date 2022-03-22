@@ -1,0 +1,1861 @@
+Microsoft Windows [Version 10.0.19044.1586]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Divash Upadhyay>mongo
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("14dfea10-1e48-4003-9402-fe7dbf1c36ea") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-03-21T22:05:18.480+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin   0.000GB
+config  0.000GB
+demo    0.000GB
+local   0.000GB
+movies  0.000GB
+web14   0.000GB
+> use movies
+switched to db movies
+> show collections
+movie
+> db.movie.find({}).pretty()
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7b"),
+        "id" : 1,
+        "movie_name" : "Good Night, The",
+        "movie_genre" : "Comedy|Drama|Fantasy|Musical|Romance",
+        "production_year" : 2017,
+        "budget" : 19330
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7c"),
+        "id" : 2,
+        "movie_name" : "Eight Below",
+        "movie_genre" : "Action|Adventure|Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 14571
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7d"),
+        "id" : 3,
+        "movie_name" : "Beware of Mr. Baker",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 12124
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7e"),
+        "id" : 4,
+        "movie_name" : "Children of Men",
+        "movie_genre" : "Action|Adventure|Drama|Sci-Fi|Thriller",
+        "production_year" : 2002,
+        "budget" : 16478
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7f"),
+        "id" : 5,
+        "movie_name" : "Roadkill (a.k.a. Roadkill: Move or Die)",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : 16337
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce80"),
+        "id" : 6,
+        "movie_name" : "Three Faces of Eve, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 11275
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce81"),
+        "id" : 7,
+        "movie_name" : "Love Is Colder Than Death (Liebe ist kälter als der Tod)",
+        "movie_genre" : "Comedy|Crime|Romance",
+        "production_year" : 1991,
+        "budget" : 18062
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce82"),
+        "id" : 8,
+        "movie_name" : "Millennium",
+        "movie_genre" : "Drama|Sci-Fi|Thriller",
+        "production_year" : 1993,
+        "budget" : 9319
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce83"),
+        "id" : 9,
+        "movie_name" : "Married Woman, A (Une femme mariée)",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19171
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce84"),
+        "id" : 10,
+        "movie_name" : "Scenes of a Sexual Nature",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1990,
+        "budget" : 11248
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce85"),
+        "id" : 11,
+        "movie_name" : "Countdown",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 16505
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce86"),
+        "id" : 12,
+        "movie_name" : "Marianne & Juliane (Die Bleierne Zeit)",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 15773
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce87"),
+        "id" : 13,
+        "movie_name" : "Tabloid",
+        "movie_genre" : "Documentary",
+        "production_year" : 2019,
+        "budget" : 19792
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce88"),
+        "id" : 14,
+        "movie_name" : "Jimmy Carter Man from Plains",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 12423
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce89"),
+        "id" : 15,
+        "movie_name" : "Slumber Party '57",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 1997,
+        "budget" : 17115
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8a"),
+        "id" : 16,
+        "movie_name" : "What Happened, Miss Simone?",
+        "movie_genre" : "Documentary",
+        "production_year" : 2004,
+        "budget" : 12409
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8b"),
+        "id" : 17,
+        "movie_name" : "Shadow People",
+        "movie_genre" : "Drama",
+        "production_year" : 2008,
+        "budget" : 19461
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8c"),
+        "id" : 18,
+        "movie_name" : "Return from Witch Mountain",
+        "movie_genre" : "Children|Sci-Fi",
+        "production_year" : 2006,
+        "budget" : 10224
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8d"),
+        "id" : 19,
+        "movie_name" : "Godfather: Part III, The",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2020,
+        "budget" : 10189
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8e"),
+        "id" : 20,
+        "movie_name" : "Nobody's Fool",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 15715
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8f"),
+        "id" : 21,
+        "movie_name" : "Sacro GRA",
+        "movie_genre" : "Documentary",
+        "production_year" : 2012,
+        "budget" : 16540
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce90"),
+        "id" : 22,
+        "movie_name" : "Mail Order Bride",
+        "movie_genre" : "Comedy|Western",
+        "production_year" : 2016,
+        "budget" : 10217
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce91"),
+        "id" : 23,
+        "movie_name" : "Seven Girlfriends",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2011,
+        "budget" : 15319
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce92"),
+        "id" : 24,
+        "movie_name" : "Lost Boys: The Tribe",
+        "movie_genre" : "Comedy|Horror|Thriller",
+        "production_year" : 2006,
+        "budget" : 12090
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce93"),
+        "id" : 25,
+        "movie_name" : "Raising Helen",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1993,
+        "budget" : 12134
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce94"),
+        "id" : 26,
+        "movie_name" : "Cube of Sugar, A (Ye Habe Ghand)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1995,
+        "budget" : 17486
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce95"),
+        "id" : 27,
+        "movie_name" : "Sherlock Holmes and the Secret Weapon",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 1997,
+        "budget" : 9101
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce96"),
+        "id" : 28,
+        "movie_name" : "Sparrows",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 19001
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce97"),
+        "id" : 29,
+        "movie_name" : "Bloody Territories (Kôiki bôryoku: ryuuketsu no shima)",
+        "movie_genre" : "Action|Crime",
+        "production_year" : 2001,
+        "budget" : 19357
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce98"),
+        "id" : 30,
+        "movie_name" : "Life or Something Like It",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 16103
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce99"),
+        "id" : 31,
+        "movie_name" : "Never Give a Sucker an Even Break",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 2013,
+        "budget" : 16751
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce9a"),
+        "id" : 32,
+        "movie_name" : "Hot Spot, The",
+        "movie_genre" : "Crime|Drama|Romance",
+        "production_year" : 2008,
+        "budget" : 12705
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce9b"),
+        "id" : 33,
+        "movie_name" : "The Wait",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2011,
+        "budget" : 15292
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce9c"),
+        "id" : 34,
+        "movie_name" : "Birder's Guide to Everything, A",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 18508
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce9d"),
+        "id" : 35,
+        "movie_name" : "Lucky Night",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1990,
+        "budget" : 14335
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce9e"),
+        "id" : 36,
+        "movie_name" : "3 Days to Kill",
+        "movie_genre" : "Action|Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 9083
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce9f"),
+        "id" : 37,
+        "movie_name" : "Red Squirrel, The (Ardilla roja, La)",
+        "movie_genre" : "Comedy|Drama|Mystery|Romance",
+        "production_year" : 2013,
+        "budget" : 14573
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea0"),
+        "id" : 38,
+        "movie_name" : "Blue Denim",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : 15923
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea1"),
+        "id" : 39,
+        "movie_name" : "Special",
+        "movie_genre" : "Drama|Fantasy",
+        "production_year" : 1990,
+        "budget" : 12570
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea2"),
+        "id" : 40,
+        "movie_name" : "Fuga de cerebros",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 10874
+}
+Type "it" for more
+
+> db.movie.find({"movie_name": {$eq: "Special"}}).pretty()
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea1"),
+        "id" : 39,
+        "movie_name" : "Special",
+        "movie_genre" : "Drama|Fantasy",
+        "production_year" : 1990,
+        "budget" : 12570
+}
+> db.movie.find({"movie_name": {$ne: "Special"}}).pretty()
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7b"),
+        "id" : 1,
+        "movie_name" : "Good Night, The",
+        "movie_genre" : "Comedy|Drama|Fantasy|Musical|Romance",
+        "production_year" : 2017,
+        "budget" : 19330
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7c"),
+        "id" : 2,
+        "movie_name" : "Eight Below",
+        "movie_genre" : "Action|Adventure|Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 14571
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7d"),
+        "id" : 3,
+        "movie_name" : "Beware of Mr. Baker",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 12124
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7e"),
+        "id" : 4,
+        "movie_name" : "Children of Men",
+        "movie_genre" : "Action|Adventure|Drama|Sci-Fi|Thriller",
+        "production_year" : 2002,
+        "budget" : 16478
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7f"),
+        "id" : 5,
+        "movie_name" : "Roadkill (a.k.a. Roadkill: Move or Die)",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : 16337
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce80"),
+        "id" : 6,
+        "movie_name" : "Three Faces of Eve, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 11275
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce81"),
+        "id" : 7,
+        "movie_name" : "Love Is Colder Than Death (Liebe ist kälter als der Tod)",
+        "movie_genre" : "Comedy|Crime|Romance",
+        "production_year" : 1991,
+        "budget" : 18062
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce82"),
+        "id" : 8,
+        "movie_name" : "Millennium",
+        "movie_genre" : "Drama|Sci-Fi|Thriller",
+        "production_year" : 1993,
+        "budget" : 9319
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce83"),
+        "id" : 9,
+        "movie_name" : "Married Woman, A (Une femme mariée)",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19171
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce84"),
+        "id" : 10,
+        "movie_name" : "Scenes of a Sexual Nature",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1990,
+        "budget" : 11248
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce85"),
+        "id" : 11,
+        "movie_name" : "Countdown",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 16505
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce86"),
+        "id" : 12,
+        "movie_name" : "Marianne & Juliane (Die Bleierne Zeit)",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 15773
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce87"),
+        "id" : 13,
+        "movie_name" : "Tabloid",
+        "movie_genre" : "Documentary",
+        "production_year" : 2019,
+        "budget" : 19792
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce88"),
+        "id" : 14,
+        "movie_name" : "Jimmy Carter Man from Plains",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 12423
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce89"),
+        "id" : 15,
+        "movie_name" : "Slumber Party '57",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 1997,
+        "budget" : 17115
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8a"),
+        "id" : 16,
+        "movie_name" : "What Happened, Miss Simone?",
+        "movie_genre" : "Documentary",
+        "production_year" : 2004,
+        "budget" : 12409
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8b"),
+        "id" : 17,
+        "movie_name" : "Shadow People",
+        "movie_genre" : "Drama",
+        "production_year" : 2008,
+        "budget" : 19461
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8c"),
+        "id" : 18,
+        "movie_name" : "Return from Witch Mountain",
+        "movie_genre" : "Children|Sci-Fi",
+        "production_year" : 2006,
+        "budget" : 10224
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8d"),
+        "id" : 19,
+        "movie_name" : "Godfather: Part III, The",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2020,
+        "budget" : 10189
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8e"),
+        "id" : 20,
+        "movie_name" : "Nobody's Fool",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 15715
+}
+Type "it" for more
+> db.movie.find({"budget": {$gte:12000}}).pretty()
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7b"),
+        "id" : 1,
+        "movie_name" : "Good Night, The",
+        "movie_genre" : "Comedy|Drama|Fantasy|Musical|Romance",
+        "production_year" : 2017,
+        "budget" : 19330
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7c"),
+        "id" : 2,
+        "movie_name" : "Eight Below",
+        "movie_genre" : "Action|Adventure|Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 14571
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7d"),
+        "id" : 3,
+        "movie_name" : "Beware of Mr. Baker",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 12124
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7e"),
+        "id" : 4,
+        "movie_name" : "Children of Men",
+        "movie_genre" : "Action|Adventure|Drama|Sci-Fi|Thriller",
+        "production_year" : 2002,
+        "budget" : 16478
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7f"),
+        "id" : 5,
+        "movie_name" : "Roadkill (a.k.a. Roadkill: Move or Die)",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : 16337
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce81"),
+        "id" : 7,
+        "movie_name" : "Love Is Colder Than Death (Liebe ist kälter als der Tod)",
+        "movie_genre" : "Comedy|Crime|Romance",
+        "production_year" : 1991,
+        "budget" : 18062
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce83"),
+        "id" : 9,
+        "movie_name" : "Married Woman, A (Une femme mariée)",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19171
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce85"),
+        "id" : 11,
+        "movie_name" : "Countdown",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 16505
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce86"),
+        "id" : 12,
+        "movie_name" : "Marianne & Juliane (Die Bleierne Zeit)",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 15773
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce87"),
+        "id" : 13,
+        "movie_name" : "Tabloid",
+        "movie_genre" : "Documentary",
+        "production_year" : 2019,
+        "budget" : 19792
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce88"),
+        "id" : 14,
+        "movie_name" : "Jimmy Carter Man from Plains",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 12423
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce89"),
+        "id" : 15,
+        "movie_name" : "Slumber Party '57",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 1997,
+        "budget" : 17115
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8a"),
+        "id" : 16,
+        "movie_name" : "What Happened, Miss Simone?",
+        "movie_genre" : "Documentary",
+        "production_year" : 2004,
+        "budget" : 12409
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8b"),
+        "id" : 17,
+        "movie_name" : "Shadow People",
+        "movie_genre" : "Drama",
+        "production_year" : 2008,
+        "budget" : 19461
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8e"),
+        "id" : 20,
+        "movie_name" : "Nobody's Fool",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 15715
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8f"),
+        "id" : 21,
+        "movie_name" : "Sacro GRA",
+        "movie_genre" : "Documentary",
+        "production_year" : 2012,
+        "budget" : 16540
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce91"),
+        "id" : 23,
+        "movie_name" : "Seven Girlfriends",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2011,
+        "budget" : 15319
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce92"),
+        "id" : 24,
+        "movie_name" : "Lost Boys: The Tribe",
+        "movie_genre" : "Comedy|Horror|Thriller",
+        "production_year" : 2006,
+        "budget" : 12090
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce93"),
+        "id" : 25,
+        "movie_name" : "Raising Helen",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1993,
+        "budget" : 12134
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce94"),
+        "id" : 26,
+        "movie_name" : "Cube of Sugar, A (Ye Habe Ghand)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1995,
+        "budget" : 17486
+}
+Type "it" for more
+> db.movie.find({"budget": {$lte:12000}}).pretty()
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce80"),
+        "id" : 6,
+        "movie_name" : "Three Faces of Eve, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 11275
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce82"),
+        "id" : 8,
+        "movie_name" : "Millennium",
+        "movie_genre" : "Drama|Sci-Fi|Thriller",
+        "production_year" : 1993,
+        "budget" : 9319
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce84"),
+        "id" : 10,
+        "movie_name" : "Scenes of a Sexual Nature",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1990,
+        "budget" : 11248
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8c"),
+        "id" : 18,
+        "movie_name" : "Return from Witch Mountain",
+        "movie_genre" : "Children|Sci-Fi",
+        "production_year" : 2006,
+        "budget" : 10224
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8d"),
+        "id" : 19,
+        "movie_name" : "Godfather: Part III, The",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2020,
+        "budget" : 10189
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce90"),
+        "id" : 22,
+        "movie_name" : "Mail Order Bride",
+        "movie_genre" : "Comedy|Western",
+        "production_year" : 2016,
+        "budget" : 10217
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce95"),
+        "id" : 27,
+        "movie_name" : "Sherlock Holmes and the Secret Weapon",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 1997,
+        "budget" : 9101
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce9e"),
+        "id" : 36,
+        "movie_name" : "3 Days to Kill",
+        "movie_genre" : "Action|Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 9083
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea2"),
+        "id" : 40,
+        "movie_name" : "Fuga de cerebros",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 10874
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea3"),
+        "id" : 41,
+        "movie_name" : "Bass Ackwards",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 9642
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea9"),
+        "id" : 47,
+        "movie_name" : "Towering Inferno, The",
+        "movie_genre" : "Action|Adventure|Drama|Thriller",
+        "production_year" : 2019,
+        "budget" : 10360
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fceab"),
+        "id" : 49,
+        "movie_name" : "New One-Armed Swordsman, The (Xin du bi dao)",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 2018,
+        "budget" : 11601
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcead"),
+        "id" : 51,
+        "movie_name" : "Bill Maher: Victory Begins at Home",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : 10318
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fceaf"),
+        "id" : 53,
+        "movie_name" : "Program, The",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2018,
+        "budget" : 10454
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fceb1"),
+        "id" : 55,
+        "movie_name" : "Lawless, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 10441
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcebc"),
+        "id" : 66,
+        "movie_name" : "Zipper",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2002,
+        "budget" : 10793
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcec2"),
+        "id" : 72,
+        "movie_name" : "Ballad of Jack and Rose, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2004,
+        "budget" : 9579
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcec4"),
+        "id" : 74,
+        "movie_name" : "No More School",
+        "movie_genre" : "Comedy",
+        "production_year" : 1994,
+        "budget" : 11968
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcec5"),
+        "id" : 75,
+        "movie_name" : "Gentlemen Broncos",
+        "movie_genre" : "Comedy",
+        "production_year" : 2009,
+        "budget" : 10682
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcecb"),
+        "id" : 81,
+        "movie_name" : "100 Bloody Acres",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 2005,
+        "budget" : 10573
+}
+Type "it" for more
+
+> db.movie.find({"budget": {$lte:12000}}).pretty()
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce80"),
+        "id" : 6,
+        "movie_name" : "Three Faces of Eve, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 11275
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce82"),
+        "id" : 8,
+        "movie_name" : "Millennium",
+        "movie_genre" : "Drama|Sci-Fi|Thriller",
+        "production_year" : 1993,
+        "budget" : 9319
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce84"),
+        "id" : 10,
+        "movie_name" : "Scenes of a Sexual Nature",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1990,
+        "budget" : 11248
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8c"),
+        "id" : 18,
+        "movie_name" : "Return from Witch Mountain",
+        "movie_genre" : "Children|Sci-Fi",
+        "production_year" : 2006,
+        "budget" : 10224
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8d"),
+        "id" : 19,
+        "movie_name" : "Godfather: Part III, The",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2020,
+        "budget" : 10189
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce90"),
+        "id" : 22,
+        "movie_name" : "Mail Order Bride",
+        "movie_genre" : "Comedy|Western",
+        "production_year" : 2016,
+        "budget" : 10217
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce95"),
+        "id" : 27,
+        "movie_name" : "Sherlock Holmes and the Secret Weapon",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 1997,
+        "budget" : 9101
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce9e"),
+        "id" : 36,
+        "movie_name" : "3 Days to Kill",
+        "movie_genre" : "Action|Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 9083
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea2"),
+        "id" : 40,
+        "movie_name" : "Fuga de cerebros",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 10874
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea3"),
+        "id" : 41,
+        "movie_name" : "Bass Ackwards",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 9642
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea9"),
+        "id" : 47,
+        "movie_name" : "Towering Inferno, The",
+        "movie_genre" : "Action|Adventure|Drama|Thriller",
+        "production_year" : 2019,
+        "budget" : 10360
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fceab"),
+        "id" : 49,
+        "movie_name" : "New One-Armed Swordsman, The (Xin du bi dao)",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 2018,
+        "budget" : 11601
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcead"),
+        "id" : 51,
+        "movie_name" : "Bill Maher: Victory Begins at Home",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : 10318
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fceaf"),
+        "id" : 53,
+        "movie_name" : "Program, The",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2018,
+        "budget" : 10454
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fceb1"),
+        "id" : 55,
+        "movie_name" : "Lawless, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 10441
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcebc"),
+        "id" : 66,
+        "movie_name" : "Zipper",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2002,
+        "budget" : 10793
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcec2"),
+        "id" : 72,
+        "movie_name" : "Ballad of Jack and Rose, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2004,
+        "budget" : 9579
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcec4"),
+        "id" : 74,
+        "movie_name" : "No More School",
+        "movie_genre" : "Comedy",
+        "production_year" : 1994,
+        "budget" : 11968
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcec5"),
+        "id" : 75,
+        "movie_name" : "Gentlemen Broncos",
+        "movie_genre" : "Comedy",
+        "production_year" : 2009,
+        "budget" : 10682
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcecb"),
+        "id" : 81,
+        "movie_name" : "100 Bloody Acres",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 2005,
+        "budget" : 10573
+}
+Type "it" for more
+> db.movie.find({$and: [{"production_year": {$gt:2000}},{"budget": {$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7b"),
+        "id" : 1,
+        "movie_name" : "Good Night, The",
+        "movie_genre" : "Comedy|Drama|Fantasy|Musical|Romance",
+        "production_year" : 2017,
+        "budget" : 19330
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7c"),
+        "id" : 2,
+        "movie_name" : "Eight Below",
+        "movie_genre" : "Action|Adventure|Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 14571
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7e"),
+        "id" : 4,
+        "movie_name" : "Children of Men",
+        "movie_genre" : "Action|Adventure|Drama|Sci-Fi|Thriller",
+        "production_year" : 2002,
+        "budget" : 16478
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7f"),
+        "id" : 5,
+        "movie_name" : "Roadkill (a.k.a. Roadkill: Move or Die)",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : 16337
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce80"),
+        "id" : 6,
+        "movie_name" : "Three Faces of Eve, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 11275
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce83"),
+        "id" : 9,
+        "movie_name" : "Married Woman, A (Une femme mariée)",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19171
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce85"),
+        "id" : 11,
+        "movie_name" : "Countdown",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 16505
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce86"),
+        "id" : 12,
+        "movie_name" : "Marianne & Juliane (Die Bleierne Zeit)",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 15773
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce87"),
+        "id" : 13,
+        "movie_name" : "Tabloid",
+        "movie_genre" : "Documentary",
+        "production_year" : 2019,
+        "budget" : 19792
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8a"),
+        "id" : 16,
+        "movie_name" : "What Happened, Miss Simone?",
+        "movie_genre" : "Documentary",
+        "production_year" : 2004,
+        "budget" : 12409
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8b"),
+        "id" : 17,
+        "movie_name" : "Shadow People",
+        "movie_genre" : "Drama",
+        "production_year" : 2008,
+        "budget" : 19461
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8c"),
+        "id" : 18,
+        "movie_name" : "Return from Witch Mountain",
+        "movie_genre" : "Children|Sci-Fi",
+        "production_year" : 2006,
+        "budget" : 10224
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8d"),
+        "id" : 19,
+        "movie_name" : "Godfather: Part III, The",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2020,
+        "budget" : 10189
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8e"),
+        "id" : 20,
+        "movie_name" : "Nobody's Fool",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 15715
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8f"),
+        "id" : 21,
+        "movie_name" : "Sacro GRA",
+        "movie_genre" : "Documentary",
+        "production_year" : 2012,
+        "budget" : 16540
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce90"),
+        "id" : 22,
+        "movie_name" : "Mail Order Bride",
+        "movie_genre" : "Comedy|Western",
+        "production_year" : 2016,
+        "budget" : 10217
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce91"),
+        "id" : 23,
+        "movie_name" : "Seven Girlfriends",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2011,
+        "budget" : 15319
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce92"),
+        "id" : 24,
+        "movie_name" : "Lost Boys: The Tribe",
+        "movie_genre" : "Comedy|Horror|Thriller",
+        "production_year" : 2006,
+        "budget" : 12090
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce97"),
+        "id" : 29,
+        "movie_name" : "Bloody Territories (Kôiki bôryoku: ryuuketsu no shima)",
+        "movie_genre" : "Action|Crime",
+        "production_year" : 2001,
+        "budget" : 19357
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce98"),
+        "id" : 30,
+        "movie_name" : "Life or Something Like It",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 16103
+}
+Type "it" for more
+> db.movie.find({$or: [{"production_year": {$gt:2000}},{"budget": {$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7b"),
+        "id" : 1,
+        "movie_name" : "Good Night, The",
+        "movie_genre" : "Comedy|Drama|Fantasy|Musical|Romance",
+        "production_year" : 2017,
+        "budget" : 19330
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7c"),
+        "id" : 2,
+        "movie_name" : "Eight Below",
+        "movie_genre" : "Action|Adventure|Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 14571
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7d"),
+        "id" : 3,
+        "movie_name" : "Beware of Mr. Baker",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 12124
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7e"),
+        "id" : 4,
+        "movie_name" : "Children of Men",
+        "movie_genre" : "Action|Adventure|Drama|Sci-Fi|Thriller",
+        "production_year" : 2002,
+        "budget" : 16478
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7f"),
+        "id" : 5,
+        "movie_name" : "Roadkill (a.k.a. Roadkill: Move or Die)",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : 16337
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce80"),
+        "id" : 6,
+        "movie_name" : "Three Faces of Eve, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 11275
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce81"),
+        "id" : 7,
+        "movie_name" : "Love Is Colder Than Death (Liebe ist kälter als der Tod)",
+        "movie_genre" : "Comedy|Crime|Romance",
+        "production_year" : 1991,
+        "budget" : 18062
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce83"),
+        "id" : 9,
+        "movie_name" : "Married Woman, A (Une femme mariée)",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19171
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce84"),
+        "id" : 10,
+        "movie_name" : "Scenes of a Sexual Nature",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1990,
+        "budget" : 11248
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce85"),
+        "id" : 11,
+        "movie_name" : "Countdown",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 16505
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce86"),
+        "id" : 12,
+        "movie_name" : "Marianne & Juliane (Die Bleierne Zeit)",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 15773
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce87"),
+        "id" : 13,
+        "movie_name" : "Tabloid",
+        "movie_genre" : "Documentary",
+        "production_year" : 2019,
+        "budget" : 19792
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce88"),
+        "id" : 14,
+        "movie_name" : "Jimmy Carter Man from Plains",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 12423
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce89"),
+        "id" : 15,
+        "movie_name" : "Slumber Party '57",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 1997,
+        "budget" : 17115
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8a"),
+        "id" : 16,
+        "movie_name" : "What Happened, Miss Simone?",
+        "movie_genre" : "Documentary",
+        "production_year" : 2004,
+        "budget" : 12409
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8b"),
+        "id" : 17,
+        "movie_name" : "Shadow People",
+        "movie_genre" : "Drama",
+        "production_year" : 2008,
+        "budget" : 19461
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8c"),
+        "id" : 18,
+        "movie_name" : "Return from Witch Mountain",
+        "movie_genre" : "Children|Sci-Fi",
+        "production_year" : 2006,
+        "budget" : 10224
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8d"),
+        "id" : 19,
+        "movie_name" : "Godfather: Part III, The",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2020,
+        "budget" : 10189
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8e"),
+        "id" : 20,
+        "movie_name" : "Nobody's Fool",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 15715
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8f"),
+        "id" : 21,
+        "movie_name" : "Sacro GRA",
+        "movie_genre" : "Documentary",
+        "production_year" : 2012,
+        "budget" : 16540
+}
+Type "it" for more
+> db.movie.find({$nor: [{"production_year": {$gt:2000}},{"budget": {$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce82"),
+        "id" : 8,
+        "movie_name" : "Millennium",
+        "movie_genre" : "Drama|Sci-Fi|Thriller",
+        "production_year" : 1993,
+        "budget" : 9319
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce95"),
+        "id" : 27,
+        "movie_name" : "Sherlock Holmes and the Secret Weapon",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 1997,
+        "budget" : 9101
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce9e"),
+        "id" : 36,
+        "movie_name" : "3 Days to Kill",
+        "movie_genre" : "Action|Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 9083
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcefa"),
+        "id" : 128,
+        "movie_name" : "Plague Dogs, The",
+        "movie_genre" : "Adventure|Animation|Drama",
+        "production_year" : 1997,
+        "budget" : 9963
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcefc"),
+        "id" : 130,
+        "movie_name" : "Buck Privates",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 1994,
+        "budget" : 9437
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcf0a"),
+        "id" : 144,
+        "movie_name" : "The Chumscrubber",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1999,
+        "budget" : 9186
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcf35"),
+        "id" : 187,
+        "movie_name" : "Light Years (Gandahar)",
+        "movie_genre" : "Adventure|Animation|Fantasy|Sci-Fi",
+        "production_year" : 1993,
+        "budget" : 9352
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcf4d"),
+        "id" : 211,
+        "movie_name" : "Love Exposure (Ai No Mukidashi)",
+        "movie_genre" : "Action|Comedy|Drama|Romance",
+        "production_year" : 1999,
+        "budget" : 9563
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcf81"),
+        "id" : 263,
+        "movie_name" : "Late Chrysanthemums (Bangiku)",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 9716
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcfd6"),
+        "id" : 348,
+        "movie_name" : "Payday",
+        "movie_genre" : "Drama",
+        "production_year" : 1998,
+        "budget" : 9091
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcfea"),
+        "id" : 368,
+        "movie_name" : "Praying with Lior",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 9242
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fd01c"),
+        "id" : 418,
+        "movie_name" : "Soldier in the Rain",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1991,
+        "budget" : 9649
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fd01f"),
+        "id" : 421,
+        "movie_name" : "Pepe",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 1999,
+        "budget" : 9680
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fd037"),
+        "id" : 445,
+        "movie_name" : "New York",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 1999,
+        "budget" : 9093
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fd044"),
+        "id" : 458,
+        "movie_name" : "Soldier of Fortune",
+        "movie_genre" : "Adventure|Crime|Drama|Romance|Thriller",
+        "production_year" : 1990,
+        "budget" : 9526
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fd04b"),
+        "id" : 465,
+        "movie_name" : "Decoder",
+        "movie_genre" : "Horror|Mystery|Sci-Fi",
+        "production_year" : 1998,
+        "budget" : 9145
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fd04e"),
+        "id" : 468,
+        "movie_name" : "Thieves Like Us",
+        "movie_genre" : "Crime|Drama|Romance",
+        "production_year" : 1990,
+        "budget" : 9319
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fd058"),
+        "id" : 478,
+        "movie_name" : "Inquire Within",
+        "movie_genre" : "Comedy",
+        "production_year" : 1991,
+        "budget" : 9919
+}
+
+> db.movie.find({"production_year":{$in:[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010]}}).pretty()
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7c"),
+        "id" : 2,
+        "movie_name" : "Eight Below",
+        "movie_genre" : "Action|Adventure|Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 14571
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7d"),
+        "id" : 3,
+        "movie_name" : "Beware of Mr. Baker",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 12124
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7e"),
+        "id" : 4,
+        "movie_name" : "Children of Men",
+        "movie_genre" : "Action|Adventure|Drama|Sci-Fi|Thriller",
+        "production_year" : 2002,
+        "budget" : 16478
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce7f"),
+        "id" : 5,
+        "movie_name" : "Roadkill (a.k.a. Roadkill: Move or Die)",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : 16337
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce80"),
+        "id" : 6,
+        "movie_name" : "Three Faces of Eve, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 11275
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce83"),
+        "id" : 9,
+        "movie_name" : "Married Woman, A (Une femme mariée)",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19171
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce85"),
+        "id" : 11,
+        "movie_name" : "Countdown",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 16505
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce86"),
+        "id" : 12,
+        "movie_name" : "Marianne & Juliane (Die Bleierne Zeit)",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 15773
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8a"),
+        "id" : 16,
+        "movie_name" : "What Happened, Miss Simone?",
+        "movie_genre" : "Documentary",
+        "production_year" : 2004,
+        "budget" : 12409
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8b"),
+        "id" : 17,
+        "movie_name" : "Shadow People",
+        "movie_genre" : "Drama",
+        "production_year" : 2008,
+        "budget" : 19461
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8c"),
+        "id" : 18,
+        "movie_name" : "Return from Witch Mountain",
+        "movie_genre" : "Children|Sci-Fi",
+        "production_year" : 2006,
+        "budget" : 10224
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce92"),
+        "id" : 24,
+        "movie_name" : "Lost Boys: The Tribe",
+        "movie_genre" : "Comedy|Horror|Thriller",
+        "production_year" : 2006,
+        "budget" : 12090
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce97"),
+        "id" : 29,
+        "movie_name" : "Bloody Territories (Kôiki bôryoku: ryuuketsu no shima)",
+        "movie_genre" : "Action|Crime",
+        "production_year" : 2001,
+        "budget" : 19357
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce9a"),
+        "id" : 32,
+        "movie_name" : "Hot Spot, The",
+        "movie_genre" : "Crime|Drama|Romance",
+        "production_year" : 2008,
+        "budget" : 12705
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce9c"),
+        "id" : 34,
+        "movie_name" : "Birder's Guide to Everything, A",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 18508
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea2"),
+        "id" : 40,
+        "movie_name" : "Fuga de cerebros",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 10874
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea3"),
+        "id" : 41,
+        "movie_name" : "Bass Ackwards",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 9642
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea5"),
+        "id" : 43,
+        "movie_name" : "Son of Paleface",
+        "movie_genre" : "Action|Comedy|Romance|Western",
+        "production_year" : 2008,
+        "budget" : 17716
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea7"),
+        "id" : 45,
+        "movie_name" : "Signs",
+        "movie_genre" : "Romance",
+        "production_year" : 2008,
+        "budget" : 12910
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea8"),
+        "id" : 46,
+        "movie_name" : "Watching the Detectives",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2010,
+        "budget" : 18927
+}
+Type "it" for more
+
+> db.movie.find().sort({production_year: -1}).pretty()
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce8d"),
+        "id" : 19,
+        "movie_name" : "Godfather: Part III, The",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2020,
+        "budget" : 10189
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce98"),
+        "id" : 30,
+        "movie_name" : "Life or Something Like It",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 16103
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcec1"),
+        "id" : 71,
+        "movie_name" : "Training Day",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 2020,
+        "budget" : 18414
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcec3"),
+        "id" : 73,
+        "movie_name" : "Naked Violence",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2020,
+        "budget" : 14165
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fced7"),
+        "id" : 93,
+        "movie_name" : "Goodbye Again",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 9987
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcee2"),
+        "id" : 104,
+        "movie_name" : "Jeanne and the Perfect Guy (Jeanne et le garçon formidable)",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 10905
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcef2"),
+        "id" : 120,
+        "movie_name" : "Jay-Z: Made in America",
+        "movie_genre" : "Documentary",
+        "production_year" : 2020,
+        "budget" : 15386
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcf04"),
+        "id" : 138,
+        "movie_name" : "Woodstock Diary",
+        "movie_genre" : "Documentary",
+        "production_year" : 2020,
+        "budget" : 17421
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcf2e"),
+        "id" : 180,
+        "movie_name" : "Steel Helmet, The",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 2020,
+        "budget" : 18309
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcf57"),
+        "id" : 221,
+        "movie_name" : "Deception",
+        "movie_genre" : "Drama|Film-Noir|Thriller",
+        "production_year" : 2020,
+        "budget" : 11107
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcf8a"),
+        "id" : 272,
+        "movie_name" : "Henry V (Chronicle History of King Henry the Fift with His Battell Fought at Agincourt in France, The)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2020,
+        "budget" : 12931
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcf98"),
+        "id" : 286,
+        "movie_name" : "Renegades",
+        "movie_genre" : "Action",
+        "production_year" : 2020,
+        "budget" : 16777
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcfca"),
+        "id" : 336,
+        "movie_name" : "For the Birds",
+        "movie_genre" : "Animation|Children|Comedy",
+        "production_year" : 2020,
+        "budget" : 16172
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcfcc"),
+        "id" : 338,
+        "movie_name" : "Legend No. 17",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 16646
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fd019"),
+        "id" : 415,
+        "movie_name" : "Devil's Nightmare, The (Plus longue nuit du diable, La)",
+        "movie_genre" : "Fantasy|Horror",
+        "production_year" : 2020,
+        "budget" : 15418
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fd021"),
+        "id" : 423,
+        "movie_name" : "Alias the Doctor",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 9662
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fce87"),
+        "id" : 13,
+        "movie_name" : "Tabloid",
+        "movie_genre" : "Documentary",
+        "production_year" : 2019,
+        "budget" : 19792
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcea9"),
+        "id" : 47,
+        "movie_name" : "Towering Inferno, The",
+        "movie_genre" : "Action|Adventure|Drama|Thriller",
+        "production_year" : 2019,
+        "budget" : 10360
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcebd"),
+        "id" : 67,
+        "movie_name" : "Sniper",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2019,
+        "budget" : 12088
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcf00"),
+        "id" : 134,
+        "movie_name" : "Snow Queen",
+        "movie_genre" : "Adventure|Children|Fantasy",
+        "production_year" : 2019,
+        "budget" : 19479
+}
+Type "it" for more
+> db.movie.find().sort({production_year: -1}).skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("6239f12ea43701c9421fd019"),
+        "id" : 415,
+        "movie_name" : "Devil's Nightmare, The (Plus longue nuit du diable, La)",
+        "movie_genre" : "Fantasy|Horror",
+        "production_year" : 2020,
+        "budget" : 15418
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcfcc"),
+        "id" : 338,
+        "movie_name" : "Legend No. 17",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 16646
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcf98"),
+        "id" : 286,
+        "movie_name" : "Renegades",
+        "movie_genre" : "Action",
+        "production_year" : 2020,
+        "budget" : 16777
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fcf2e"),
+        "id" : 180,
+        "movie_name" : "Steel Helmet, The",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 2020,
+        "budget" : 18309
+}
+{
+        "_id" : ObjectId("6239f12ea43701c9421fced7"),
+        "id" : 93,
+        "movie_name" : "Goodbye Again",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 9987
+}
+>
